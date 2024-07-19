@@ -17,7 +17,7 @@ async function getPetitions(app) {
         WHERE
             petitions.created_at BETWEEN DATE('now', 'weekday 0', '-15 days') AND DATE('now', 'weekday 0', '-7 days')
         ORDER BY
-            created_at ASC
+            created_at DESC
         LIMIT 3`
     );
 }
